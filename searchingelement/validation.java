@@ -26,10 +26,13 @@ public class validation {
 	 
 	 String searchElement;
 	 System.out.println("Enter E-mail ID here: ");
+	 
 	 Scanner emailid = new Scanner(System.in);
 	 searchElement = emailid.nextLine();
+	 
 	 String regex = "^(.+)@(.+)$";
 	 Matcher matcher = Pattern.compile(regex).matcher(searchElement);
+	 
 	 if (matcher.matches() && emailids.stream().anyMatch(mail -> 
 	mail.equals(searchElement))) {
 	 System.out.println(searchElement + " = E-mail ID found");
