@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  </head>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <body>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Ming's Diner</a>
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link" href="form.html">Contact</a>
+                    <a class="nav-link" href="page.html">Pagination</a> 
+                    <a class="nav-link" href="order.html">Order</a>
+                </div>   
+            </div>
+        </nav>
+        <br><br>
+        
+        <div class="d-flex justify-content-center">
+            <div class="w-75 p-3">
+                <div class="jumbotron jumbotron-fluid">
+                    <div>
+                        <h1 class="display-4" style="text-align: center;">Contact Us</h1>
+                        <form class="w-50 mx-auto">
+                            <div class="form-group">
+                            <label for="exampleFormControlInput1">How can we contact you?</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlSelect1">How would you rate your experience?</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Additional Feedback?</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="form-group" style="text-align: center;">
+                                <button type="submit" class="btn btn-primary" onclick="myFunction()">Enter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function myFunction() {
+              alert("Feedback Sent!");
+            }
+        </script>
+    </body>
