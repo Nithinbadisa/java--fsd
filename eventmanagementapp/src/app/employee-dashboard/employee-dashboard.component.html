@@ -1,0 +1,164 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <h1 style="color: white">Event Management Employee Admin Panel</h1>
+      <div class="d-fles">
+        <button
+        (click)="clickAddEmployee()"
+          type="button"
+          data-toggle="modal"
+          data-target="#exampleModal"
+          class="btn btn-success"
+        >
+          Add Employee
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">Employee Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email Id</th>
+        <th scope="col">Mobile No.</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let temp of employeeData">
+        <td>{{ temp.id }}</td>
+        <td>{{ temp.firstName }}</td>
+        <td>{{ temp.lastName }}</td>
+        <td>{{ temp.email }}</td>
+        <td>{{ temp.mobile }}</td>
+        <td>{{ temp.salary }}</td>
+        <td>
+          <button
+            type="button"
+            data-toggle="modal"
+            data-target="#exampleModal"
+            class="btn btn-info"
+            (click)="onEdit(temp)"
+          >
+            Edit
+          </button>
+          <button (click)="deleteEmployee(temp)" class="btn btn-danger mx-3">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+        <div class="modal-body">
+          <form [formGroup]="formValue">
+            <div class="form-group">
+              <label for="exampleInputEmail1">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                formControlName="firstName"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+                formControlName="lastName"
+              />
+            </div>
+  
+            <div class="form-group">
+              <label for="exampleInputPassword1">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputPassword1"
+                formControlName="email"
+              />
+            </div>
+  
+            <div class="form-group">
+              <label for="exampleInputPassword1">Mobile No.</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+                formControlName="mobile"
+              />
+            </div>
+  
+            <div class="form-group">
+              <label for="exampleInputPassword1">Salary</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+                formControlName="salary"
+              />
+            </div>
+          </form>
+     </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            id="cancel"
+            class="btn btn-secondary"
+            data-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            type="button"
+            (click)="postEmployeeDetails()"
+            class="btn btn-primary"
+            *ngIf="showAdd"
+          >
+            Add
+          </button>
+  
+          <button
+            type="button"
+            (click)="updateEmployee()"
+            class="btn btn-primary"
+            *ngIf="showUpdate"
+          >
+            Update
+          </button>
+  
+        </div>
+      </div>
+    </div>
+  </div>

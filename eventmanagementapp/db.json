@@ -1,0 +1,24 @@
+{
+    "posts": [
+      {
+        "id": 9,
+        "firstName": "nithin",
+        "lastName": "raj",
+        "email": "raj@gmail.com",
+        "mobile": "123456780",
+        "salary": "60000"
+      },
+      {
+        "id": 10,
+        "firstName": "kumar",
+        "lastName":  "kim",
+        "email": "loki@gmail.com",
+        "mobile": "9782138915",
+        "salary": "444"
+      }
+    ],
+    "comments": [],
+    "profile": {
+      "name": "typicode"
+    }
+  }

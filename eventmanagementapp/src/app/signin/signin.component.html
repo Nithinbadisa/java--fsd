@@ -1,0 +1,27 @@
+<div class="pos-f-t">
+  
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span style="font-size: 35px ;">Amazing Portfolio App</span>
+      </button>
+    </nav>
+  
+  </div>
+  
+  <div class="container mt-5 w-50">
+    <form [formGroup]="registerForm" (ngSubmit)="OnSubmit()">
+      <div class="form-group pt-5">
+        <label for="exampleInputEmail1"><i class="fa-solid fa-envelope"></i> Email address</label>
+        <input type="email" formControlName="uemail"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group mt-5">
+        <label for="exampleInputPassword1"><i class="fa-sharp fa-solid fa-key"></i> Password </label>
+        <input type="password" formControlName="upassword" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div >
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary ">Submit</button>
+  
+      </div>
+        </form>
+  </div>
