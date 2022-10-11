@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-11T12:29:34 IST" name="Default suite" finished-at="2022-10-11T12:35:34 IST" duration-ms="359646">
+    <groups>
+    </groups>
+    <test started-at="2022-10-11T12:29:34 IST" name="Default test" finished-at="2022-10-11T12:35:34 IST" duration-ms="359646">
+      <class name="com.simplilearn.Flipkart">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.simplilearn.Flipkart@359df09a]" started-at="2022-10-11T12:29:34 IST" name="beforeMethod" finished-at="2022-10-11T12:30:32 IST" duration-ms="58267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="flipkart()[pri:0, instance:com.simplilearn.Flipkart@359df09a]" started-at="2022-10-11T12:30:32 IST" name="flipkart" finished-at="2022-10-11T12:35:33 IST" duration-ms="300918" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[TimedPromise timed out after 300000 ms
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-MEJUU1R', ip: '192.168.0.158', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\asus\AppData\Local\Temp\rust_mozprofileqzRCAy, moz:geckodriverVersion=0.31.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, moz:windowless=false, platform=ANY, proxy=Proxy(), moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=105.0.3, moz:shutdownTimeout=60000.0, moz:processID=2616.0, browserName=firefox, moz:buildID=20221007134813, javascriptEnabled=true, moz:platformVersion=10.0, platformName=windows, setWindowRect=true, moz:webdriverClick=true}]
+Session ID: c9a279ac-2177-4760-91aa-01c6e0f6d5d4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: TimedPromise timed out after 300000 ms
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-MEJUU1R', ip: '192.168.0.158', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\asus\AppData\Local\Temp\rust_mozprofileqzRCAy, moz:geckodriverVersion=0.31.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, moz:windowless=false, platform=ANY, proxy=Proxy(), moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=105.0.3, moz:shutdownTimeout=60000.0, moz:processID=2616.0, browserName=firefox, moz:buildID=20221007134813, javascriptEnabled=true, moz:platformVersion=10.0, platformName=windows, setWindowRect=true, moz:webdriverClick=true}]
+Session ID: c9a279ac-2177-4760-91aa-01c6e0f6d5d4
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:368)
+at com.simplilearn.Flipkart.flipkart(Flipkart.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flipkart -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.simplilearn.Flipkart@359df09a]" started-at="2022-10-11T12:35:33 IST" name="afterMethod" finished-at="2022-10-11T12:35:33 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.simplilearn.Flipkart -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
