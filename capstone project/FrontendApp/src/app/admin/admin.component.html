@@ -1,0 +1,54 @@
+<h1 class="text-center"><i>Admin Login</i></h1>
+<div
+  class="container mx-200 mt-10 border justify-center"
+  style="width: 400px; background-color: darkgrey"
+>
+  <h4 class="text-center">Login Page</h4>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form-center">
+    <div class="row">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          class="form-control"
+          formControlName="username"
+        />
+        <span
+          class="small"
+          *ngIf="
+            !signupForm.get('username').valid &&
+            signupForm.get('username').touched
+          "
+          >Please enter a valid username</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          formControlName="password"
+        />
+        <span
+          class="small"
+          *ngIf="
+            !signupForm.get('password').valid &&
+            signupForm.get('password').touched
+          "
+          >Incorrect Password!</span
+        >
+      </div>
+    </div>
+    <button
+      class="btn btn-primary m-2"
+      type="submit"
+      [disabled]="!signupForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
