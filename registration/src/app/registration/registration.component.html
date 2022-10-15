@@ -1,0 +1,146 @@
+<div class="container p-5 background-color">
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-12 text-center">
+             <h2>Employee Registration</h2>
+          </div>
+        </div>
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>Name:</label>
+            </div>
+            <div class="col-9">
+                <input type="text" id="Name" class="form-control" formControlName="Name">
+                <span class="text-danger" *ngIf="(loadRegistration['Name'].touched || submitted) && loadRegistration['Name'].errors?.['required']">*</span>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>DOB: </label>
+            </div>
+            <div class="col-9 ">
+                <input type="date" class="form-control" formControlName="DOB" id="date">
+                <span class="text-danger" *ngIf="(loadRegistration['DOB'].touched || submitted) && loadRegistration['DOB'].errors?.['required']">*</span>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>Gender: </label>
+            </div>
+            <div class="col-9 ">
+                <input type="radio" id="male" value="male" formControlName="Gender">
+                <label class="margin-left">Male</label>
+                <input class="margin-left" type="radio" id="female" value="female" formControlName="Gender">
+                <label class="margin-left">Female</label>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>PhoneNo: </label>
+            </div>
+            <div class="col-9 ">
+                <input type="number" formControlName="PhoneNo" id="PhoneNo" class="form-control">
+                <span class="text-danger" *ngIf="(loadRegistration['PhoneNo'].touched || submitted) && loadRegistration['PhoneNo'].errors?.['required']">*</span>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>Address: </label>
+            </div>
+            <div class="col-9 ">
+                <textarea class="form-control" formControlName="Address"></textarea>
+                <span class="text-danger" *ngIf="(loadRegistration['Address'].touched || submitted) && loadRegistration['Address'].errors?.['required']">*</span>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>EmailId: </label>
+            </div>
+            <div class="col-9 ">
+                <input type="text" id="EmailId" class="form-control" formControlName="EmailId">
+                <span class="text-danger" *ngIf="(loadRegistration['EmailId'].touched || submitted) && loadRegistration['EmailId'].errors?.['required']">*</span>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>Designation: </label>
+            </div>
+            <div class="col-9 ">
+                <input type="text" id="EmailId" class="form-control" formControlName="Designation">
+                <span class="text-danger" *ngIf="(loadRegistration['Designation'].touched || submitted) && loadRegistration['Designation'].errors?.['required']">*</span>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+
+      
+
+        
+
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>Country: </label>
+            </div>
+            <div class="col-9 ">
+                <input type="text" id="Country" class="form-control" formControlName="Country">
+                <span class="text-danger" *ngIf="(loadRegistration['Country'].touched || submitted) && loadRegistration['Country'].errors?.['required']">*</span>
+            </div>
+            
+            <div class="col-1">
+            </div>
+        </div>
+
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>City: </label>
+            </div>
+            <div class="col-9 " >
+                <input type="text" id="city" class="form-control" formControlName="City">
+                <span class="text-danger" *ngIf="(loadRegistration['City'].touched || submitted) && loadRegistration['City'].errors?.['required']">*</span>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+
+        <div class="row form-group mt-2">
+            <div class="col-2 text-right">
+                <label>Password: </label>
+            </div>
+            <div class="col-9 ">
+                <input type="password" formControlName="Password" class="form-control">
+                <span class="text-danger" *ngIf="(loadRegistration['Password'].touched || submitted) && loadRegistration['Password'].errors?.['required']">*</span>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+
+        
+
+        <div class="row form-group mt-2">
+            <div class="col-2">
+            </div>
+            <div class="col-9 text-right">
+                <button type="button" (click)="postEmployeeDetails()" class="btn btn-primary">Save</button>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </form>
+</div>
